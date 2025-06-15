@@ -1,9 +1,12 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'com.cabin.demo'
 version = '1.0-SNAPSHOT'
+
+mainClassName = 'com.cabin.demo.Main'
 
 repositories {
     mavenCentral()
@@ -19,4 +22,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
 }
