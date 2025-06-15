@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.cabin.demo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // Cabin Express library from libs folder
+    implementation files ('libs/cabin-v26.0.0.jar')
+}
+
+test {
+    useJUnitPlatform()
+}
